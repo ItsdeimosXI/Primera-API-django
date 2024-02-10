@@ -34,6 +34,18 @@ services:
       - ./data/dbdata:/var/lib/postgresql/data:delegated
     networks:
       red:
+  frontend:
+        container_name: frontend
+        image: node:lts
+        working_dir: /app
+        entrypoint: /bin/bash
+        ports:
+            - 8080:80
+        volumes:
+        - ./frontend/:/app
+        tty: true
+        #command: -c "npm run dev"
 
 networks:
   red:
+
