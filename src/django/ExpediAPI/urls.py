@@ -5,5 +5,4 @@ router = routers.DefaultRouter()
 
 router.register('api/provedor', ProveedorViewset)
 router.register('api/expediente', ExpedienteViewset)
-
 urlpatterns = router.urls
